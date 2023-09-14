@@ -21,6 +21,8 @@ res += (input1[i] == input2[i]) ? "0" : "1";
 }
 return res;
 }
+
+
 int main()
 {
 int i; // round i
