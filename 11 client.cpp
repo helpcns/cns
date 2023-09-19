@@ -36,13 +36,13 @@ int powermod(int a, int b, int n)
     return res;
 }
 
-// M = C^d mod n
+
 int decrypt(int C, int PR[2])
 {
     return powermod(C, PR[0], PR[1]);
 }
 
-// a=00, b=01, ... A=26, B=27...
+
 char toChar(int n)
 {
     return (n >= 26) ? (n+'A'-26) : (n+'a');
@@ -91,8 +91,8 @@ int main()
 
         int M = decrypt(C,PR);
         cout << "Decrypted Text : " << M << endl;
-        msg += toChar(M/100); // first char in block
-        msg += toChar(M%100); // second char in block
+        msg += toChar(M/100);
+        msg += toChar(M%100); 
     }
     cout << "\nDecrypted message : " << msg << endl;
     return 0;
